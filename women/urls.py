@@ -1,10 +1,8 @@
 from django.urls import path, re_path
-from women.views import *
+
+from .views import *
 
 urlpatterns = [
     path('', index, name='home'),
-    path('cats/<int:catid>/', categories, name='cats'),
-    re_path(r'^archive/(?P<year>[0-9]{4})/', archive, name='archive')
+    path('about/', about, name='about'),
 ]
-
-
