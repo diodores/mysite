@@ -4,7 +4,7 @@ from women.views import *
 urlpatterns = [
     path('', index, name='home'),
     path('cats/<int:catid>/', categories, name='cats'),
-    re_path(r'^archive/(?<year>[0-9]{4}/)', archive, name='archive')
+    re_path(r'^archive/(?P<year>[0-9]{4})/', archive, name='archive')
 ]
 
-handler404 = pageNotFound
+

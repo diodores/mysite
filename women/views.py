@@ -16,5 +16,8 @@ def archive(request, year):
     return HttpResponse(f'Архив по годам {year}')
 
 
+# def archive(request, year):
+#     return HttpResponse(f'АРХИВ по годам {year}')
+
 def pageNotFound(request, exception):
     return HttpResponseNotFound('Страница не найдена')
