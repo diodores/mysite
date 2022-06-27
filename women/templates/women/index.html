@@ -2,16 +2,18 @@
 
 {% block content %}
 <h1>{{title}}</h1>
+===============content=================
 
 <ul>
 	{% for p in posts %}
 	<li>
 		<h2>{{p.title}}</h2>
-		<p>{{p.content}}</p>
+		<p>{{p.content | linebreaks | truncatewords:25}}</p>
+		<p><a href="#"><i>Читать пост</i></a></p>
 		<hr>
 	</li>
 	{% endfor %}
 </ul>
-
+===============endcontent=================
 {% endblock %}
 
