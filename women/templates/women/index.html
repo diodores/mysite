@@ -1,7 +1,7 @@
 {% extends 'women/base.html' %}
 
 {% block content %}
-<h1>{{title}}</h1>
+<h1><a href="{% url 'home' %}">{{title}}</a></h1>
 ===============content=================
 
 <ul>
@@ -9,7 +9,7 @@
 	<li>
 		<h2>{{p.title}}</h2>
 		<p>{{p.content | linebreaks | truncatewords:25}}</p>
-		<p><a href="#"><i>Читать пост</i></a></p>
+		<p><a href="{{ p.ab_url }}"><i>Читать пост</i></a></p>
 		<hr>
 	</li>
 	{% endfor %}
