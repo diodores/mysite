@@ -25,4 +25,4 @@ class Category(models.Model):
         return self.name
 
     def ab_url(self):
-        return reverse('cat')
+        return reverse('categ', kwargs={'cat_id': self.pk})

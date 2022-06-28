@@ -6,6 +6,7 @@
 
 <ul>
 	{% for p in posts %}
+	<p><i>Категория: {{p.cat}} | Дата публикации : {{p.time_update|date:"d-m-y H:i:s"}}</i></p>
 	<li>
 		<h2>{{p.title}}</h2>
 		<p>{{p.content | linebreaks | truncatewords:25}}</p>
